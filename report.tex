@@ -1,0 +1,42 @@
+\documentclass{tech-report}
+
+\title{A Berkeley View of Teaching CS at Scale}
+\author{Kevin Lin}
+\newcommand*{\researchadvisor}{John S. DeNero}
+\newcommand*{\secondreader}{Joshua A. Hug}
+
+\newcommand*{\final}{}
+% \newcommand*{\signed}{}
+
+\ifdefined\signed
+    \usepackage{pdfpages}
+\fi
+
+\bibliography{bibliography}
+
+\begin{document}
+
+\ifdefined\final
+    \setcounter{page}{3} % Skip title and copyright
+\else\ifdefined\signed
+    \includepdf{signed-title}
+    \include{src/copyright}
+\else
+    \include{src/title}
+    \include{src/copyright}
+\fi\fi
+
+\include{src/abstract}
+\tableofcontents
+
+\include{src/introduction}
+\include{src/automation}
+\include{src/support}
+\include{src/preparation}
+\include{src/discussion}
+
+% Bibliography
+\bookmarksetup{startatroot}
+\printbibliography[heading=bibintoc]
+
+\end{document}
