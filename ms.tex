@@ -1,12 +1,13 @@
 \documentclass{tech-report}
+\pdfoutput=1
 
 \title{A Berkeley View of Teaching CS at Scale}
 \author{Kevin Lin}
 \newcommand*{\researchadvisor}{John S. DeNero}
 \newcommand*{\secondreader}{Joshua A. Hug}
 
-\newcommand*{\final}{}
-% \newcommand*{\signed}{}
+% \newcommand*{\final}{}
+\newcommand*{\signed}{}
 
 \ifdefined\signed
     \usepackage{pdfpages}
@@ -20,20 +21,20 @@
     \setcounter{page}{3} % Skip title and copyright
 \else\ifdefined\signed
     \includepdf{signed-title}
-    \include{src/copyright}
+    \include{copyright}
 \else
-    \include{src/title}
-    \include{src/copyright}
+    \include{title}
+    \include{copyright}
 \fi\fi
 
-\include{src/abstract}
+\include{abstract}
 \tableofcontents
 
-\include{src/introduction}
-\include{src/automation}
-\include{src/support}
-\include{src/preparation}
-\include{src/discussion}
+\include{introduction}
+\include{automation}
+\include{support}
+\include{preparation}
+\include{discussion}
 
 % Bibliography
 \bookmarksetup{startatroot}
